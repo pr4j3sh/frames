@@ -2,6 +2,7 @@
 
 const { execSync } = require("node:child_process");
 const { exit, chdir } = require("node:process");
+const { renameSync, existsSync, rmSync } = require("node:fs");
 
 const args = process.argv.slice(2);
 
@@ -17,7 +18,25 @@ try {
   if (projectName !== ".") {
     chdir(projectName);
   }
+
+  rmSync(".git", { recursive: true, force: true });
+
+  console.log("");
+  console.log("Installing dependencies...");
   execSync(`npm i`, { stdio: "inherit" });
+
+  if (existsSync(".env.example")) {
+    console.log("");
+    console.log("Creating .env file");
+    renameSync(".env.example", ".env");
+  }
+
+  console.log("");
+  console.log("Use command(s)");
+  if (projectName !== ".") {
+    console.log(`  cd ${projectName}`);
+  }
+  console.log("  npm run dev");
 } catch (error) {
   exit(1);
 }
