@@ -1,7 +1,7 @@
-# create-temp
+# frames
 
 CLI tool to initialize projects with template frameworks
 
 ```bash
-npm create temp <template_name> <project_name>
+npm create frames <template_name> <project_name>
 ```
