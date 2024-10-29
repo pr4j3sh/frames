@@ -1,6 +1,6 @@
 {
   "name": "create-temp",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "CLI tool to initialize projects with template frameworks",
   "main": "index.js",
   "bin": {
