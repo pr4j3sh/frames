@@ -1,10 +1,10 @@
 {
   "name": "@pr4j3sh/create-frames",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI tool to initialize projects with template frameworks",
   "main": "index.js",
   "bin": {
-    "create-temp": "index.js"
+    "create-frames": "./index.js"
   },
   "scripts": {
     "test": "echo \"Running tests...\" && exit 0",
