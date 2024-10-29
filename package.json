@@ -1,5 +1,5 @@
 {
-  "name": "create-temp",
+  "name": "@pr4j3sh/frames",
   "version": "1.0.0",
   "description": "CLI tool to initialize projects with template frameworks",
   "main": "index.js",
@@ -20,10 +20,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pr4j3sh/create-temp.git"
+    "url": "git+https://github.com/pr4j3sh/frames.git"
   },
   "bugs": {
-    "url": "https://github.com/pr4j3sh/create-temp/issues"
+    "url": "https://github.com/pr4j3sh/frames/issues"
   },
-  "homepage": "https://github.com/pr4j3sh/create-temp#readme"
+  "homepage": "https://github.com/pr4j3sh/frames#readme"
 }
