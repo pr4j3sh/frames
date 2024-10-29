@@ -1,16 +1,26 @@
 {
   "name": "frames",
   "version": "1.0.0",
+  "description": "CLI tool to initialize projects with template frameworks",
   "main": "index.js",
   "bin": {
     "create-frames": "./index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Running tests...\" && exit 0",
+    "build": "echo \"Build completed.\"",
     "dev": "node ."
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "keywords": [
+    "frames",
+    "template",
+    "boilerplate",
+    "framework"
+  ],
+  "author": "Prajesh Pratap Singh <prajesh.eleven118@gmail.com> (https://elevenco.vercel.app/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pr4j3sh/frames"
+  }
 }

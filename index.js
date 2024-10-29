@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const { execSync } = require("node:child_process");
 const { exit, chdir } = require("node:process");
 
