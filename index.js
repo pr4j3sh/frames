@@ -4,14 +4,16 @@ const { execSync } = require("node:child_process");
 const { exit, chdir } = require("node:process");
 const { renameSync, existsSync, rmSync } = require("node:fs");
 
+const templates = ["js-tw"];
 const args = process.argv.slice(2);
 
-if (!args[0]) {
+const repo = args[0];
+if (!repo) {
   console.error("provide a template name");
   exit(1);
 }
-const repoUrl = `https://github.com/pr4j3sh/${args[0]}.git`;
-const projectName = args[1] || args[0];
+const repoUrl = `https://github.com/pr4j3sh/${repo}.git`;
+const projectName = args[1] || repo;
 
 try {
   execSync(`git clone ${repoUrl} ${projectName}`, { stdio: "inherit" });
@@ -22,6 +24,9 @@ try {
   rmSync(".git", { recursive: true, force: true });
   if (existsSync(".github")) {
     rmSync(".github", { recursive: true, force: true });
+  }
+  if (templates.includes(repo)) {
+    rmSync("vite.config.js", { recursive: true, force: true });
   }
 
   console.log("");
