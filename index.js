@@ -20,6 +20,9 @@ try {
   }
 
   rmSync(".git", { recursive: true, force: true });
+  if (existsSync(".github")) {
+    rmSync(".github", { recursive: true, force: true });
+  }
 
   console.log("");
   console.log("Installing dependencies...");
