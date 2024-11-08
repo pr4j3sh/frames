@@ -1,6 +1,6 @@
 {
   "name": "@pr4j3sh/create-frames",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "CLI tool to initialize projects with template frameworks",
   "main": "index.js",
   "bin": {

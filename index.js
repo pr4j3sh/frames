@@ -25,6 +25,9 @@ try {
   if (existsSync(".github")) {
     rmSync(".github", { recursive: true, force: true });
   }
+  if (existsSync("LICENSE")) {
+    rmSync("LICENSE", { recursive: true, force: true });
+  }
   if (templates.includes(repo)) {
     rmSync("vite.config.js", { recursive: true, force: true });
   }
