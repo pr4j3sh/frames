@@ -1,16 +1,19 @@
 {
   "name": "@pr4j3sh/create-frames",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "CLI tool to initialize projects with template frameworks",
-  "main": "index.js",
+  "main": "dist/bundle.js",
   "bin": {
-    "create-frames": "./index.js"
+    "create-frames": "dist/bundle.js"
   },
   "scripts": {
     "test": "echo \"Running tests...\" && exit 0",
-    "build": "echo \"Build completed.\"",
+    "build": "node esbuild.config.js",
     "dev": "node ."
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "template",
     "boilerplate",
@@ -25,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/pr4j3sh/frames/issues"
   },
-  "homepage": "https://github.com/pr4j3sh/frames#readme"
+  "homepage": "https://github.com/pr4j3sh/frames#readme",
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  }
 }
