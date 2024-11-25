@@ -4,7 +4,6 @@ const { execSync } = require("node:child_process");
 const { exit, chdir } = require("node:process");
 const { renameSync, existsSync, rmSync } = require("node:fs");
 
-const templates = ["js-tw"];
 const args = process.argv.slice(2);
 
 const repo = args[0];
@@ -27,9 +26,6 @@ try {
   }
   if (existsSync("LICENSE")) {
     rmSync("LICENSE", { recursive: true, force: true });
-  }
-  if (templates.includes(repo)) {
-    rmSync("vite.config.js", { recursive: true, force: true });
   }
 
   console.log("");
