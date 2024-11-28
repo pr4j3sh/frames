@@ -9,6 +9,7 @@ export default defineConfig({
         main: resolve(__dirname, "index.html"),
         templates: resolve(__dirname, "templates/index.html"),
         guides: resolve(__dirname, "guides/index.html"),
+        request: resolve(__dirname, "request/index.html"),
       },
     },
   },
