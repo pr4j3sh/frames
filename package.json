@@ -1,7 +1,7 @@
 {
   "name": "@pr4j3sh/create-frames",
-  "version": "1.0.8",
-  "description": "CLI tool to initialize projects with template frameworks",
+  "version": "1.0.9",
+  "description": "frames CLI tool for cloning templates",
   "main": "dist/bundle.js",
   "bin": {
     "create-frames": "dist/bundle.js"

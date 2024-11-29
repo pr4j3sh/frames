@@ -28,9 +28,11 @@ try {
     rmSync("LICENSE", { recursive: true, force: true });
   }
 
-  console.log("");
-  console.log("Installing dependencies...");
-  execSync(`npm i`, { stdio: "inherit" });
+  if (existsSync("package.json")) {
+    console.log("");
+    console.log("Installing dependencies...");
+    execSync(`npm i`, { stdio: "inherit" });
+  }
 
   if (existsSync(".env.example")) {
     console.log("");
