@@ -1,6 +1,6 @@
 # frames
 
-CLI tool to initialize projects with templates
+With frames, you can skip setup and focus on building. Choose from ready-to-use templates, with custom CSS and pre-integrated utilities. Build faster and smarter!
 
 ### Pre-requisites
 
@@ -13,4 +13,4 @@ CLI tool to initialize projects with templates
 npm create @pr4j3sh/frames@latest <template_name> myproject
 ```
 
-> [Available Templates](https://pr4j3sh.vercel.app/projects/frames)
+> [Browse Templates](https://pr4j3sh.github.io/frames/templates)

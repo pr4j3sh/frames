@@ -1,6 +1,6 @@
 {
   "name": "@pr4j3sh/create-frames",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "frames CLI tool for cloning templates",
   "main": "dist/bundle.js",
   "bin": {
@@ -15,9 +15,11 @@
     "dist"
   ],
   "keywords": [
-    "template",
-    "boilerplate",
-    "framework"
+    "templates",
+    "boilerplates",
+    "frameworks",
+    "libraries",
+    "frames"
   ],
   "author": "Prajesh Pratap Singh <prajesh.eleven118@gmail.com> (https://pr4j3sh.vercel.app/)",
   "license": "MIT",
@@ -28,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/pr4j3sh/frames/issues"
   },
-  "homepage": "https://github.com/pr4j3sh/frames#readme",
+  "homepage": "https://pr4j3sh.github.io/frames/",
   "devDependencies": {
     "esbuild": "^0.24.0"
   }
