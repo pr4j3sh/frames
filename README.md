@@ -13,4 +13,5 @@ With frames, you can skip setup and focus on building. Choose from ready-to-use 
 npm create @pr4j3sh/frames@latest <template_name> myproject
 ```
 
-> [Browse Templates](https://pr4j3sh.github.io/frames/templates)
+- [Browse Templates](https://pr4j3sh.github.io/frames/templates)
+- [Browse UI](https://pr4j3sh.github.io/ui)
