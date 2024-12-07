@@ -52,7 +52,11 @@ try {
   if (projectName !== ".") {
     console.log(`  cd ${projectName}`);
   }
-  console.log("  npm run dev");
+  if (existsSync("package.json")) {
+    console.log("  npm run dev");
+  } else if (existsSync("Cargo.toml")) {
+    console.log("  cargo run");
+  }
 } catch (error) {
   console.error(error);
   exit(1);
