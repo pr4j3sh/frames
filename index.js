@@ -14,19 +14,26 @@ if (!repo) {
 const repoUrl = `https://github.com/pr4j3sh/${repo}.git`;
 const projectName = args[1] || repo;
 
+const rm = [
+  ".git",
+  ".github",
+  "LICENSE",
+  "CODE_OF_CONDUCT.md",
+  "CONTRIBUTING.md",
+  "Dockerfile",
+];
+
 try {
   execSync(`git clone ${repoUrl} ${projectName}`, { stdio: "inherit" });
   if (projectName !== ".") {
     chdir(projectName);
   }
 
-  rmSync(".git", { recursive: true, force: true });
-  if (existsSync(".github")) {
-    rmSync(".github", { recursive: true, force: true });
-  }
-  if (existsSync("LICENSE")) {
-    rmSync("LICENSE", { recursive: true, force: true });
-  }
+  rm.forEach((item) => {
+    if (existsSync(item)) {
+      rmSync(item, { recursive: true, force: true });
+    }
+  });
 
   if (existsSync("package.json")) {
     console.log("");
@@ -47,5 +54,6 @@ try {
   }
   console.log("  npm run dev");
 } catch (error) {
+  console.error(error);
   exit(1);
 }

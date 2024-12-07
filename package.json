@@ -1,6 +1,6 @@
 {
   "name": "@pr4j3sh/create-frames",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "frames CLI tool for cloning templates",
   "main": "dist/bundle.js",
   "bin": {
