@@ -1,8 +1,13 @@
 const items = [
   {
+    repo: "javascript",
+    title: "Javascript NPM Package/Library",
+    tech: ["Javascript", "Library", "Package", "NPM"],
+  },
+  {
     repo: "rust",
     title: "Rust Package/Library",
-    tech: ["Rust", "Library", "Package"],
+    tech: ["Rust", "Library", "Package", "Crate"],
   },
   {
     repo: "express-vercel",
