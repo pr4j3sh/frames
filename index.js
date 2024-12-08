@@ -56,6 +56,8 @@ try {
     console.log("  npm run dev");
   } else if (existsSync("Cargo.toml")) {
     console.log("  cargo run");
+  } else if (execSync("Makefile")) {
+    console.log("  make run");
   }
 } catch (error) {
   console.error(error);
