@@ -1,5 +1,10 @@
 const items = [
   {
+    repo: "c",
+    title: "C Package/Library",
+    tech: ["C", "Library", "Package", "Make"],
+  },
+  {
     repo: "javascript",
     title: "Javascript NPM Package/Library",
     tech: ["Javascript", "Library", "Package", "NPM"],
