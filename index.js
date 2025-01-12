@@ -58,6 +58,8 @@ try {
     console.log("  cargo run");
   } else if (execSync("Makefile")) {
     console.log("  make run");
+  } else if (execSync("pyproject.toml")) {
+    console.log("  python -m package.main");
   }
 } catch (error) {
   console.error(error);
