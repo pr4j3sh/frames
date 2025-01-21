@@ -56,9 +56,9 @@ try {
     console.log("  npm run dev");
   } else if (existsSync("Cargo.toml")) {
     console.log("  cargo run");
-  } else if (execSync("Makefile")) {
+  } else if (existsSync("Makefile")) {
     console.log("  make run");
-  } else if (execSync("pyproject.toml")) {
+  } else if (existsSync("pyproject.toml")) {
     console.log("  python -m package.main");
   }
 } catch (error) {
