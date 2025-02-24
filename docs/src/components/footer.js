@@ -5,7 +5,7 @@ const component = `<footer>
           &copy; <a href="${AUTHOR.URL}" target="_blank">${AUTHOR.USERNAME}</a>
         </p>
         <article class="btns">
-          <a href="${AUTHOR.TWITTER}" target="_blank">twitter</a>
+          <a href="${AUTHOR.CHAT}" target="_blank">chat</a>
           <span>/</span>
           <a href="${AUTHOR.GITHUB}" target="_blank">github</a>
         </article>

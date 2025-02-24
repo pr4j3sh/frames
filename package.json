@@ -1,6 +1,6 @@
 {
   "name": "@pr4j3sh/create-frames",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "frames CLI tool for cloning templates",
   "main": "dist/bundle.js",
   "bin": {
@@ -21,7 +21,7 @@
     "libraries",
     "frames"
   ],
-  "author": "Prajesh Pratap Singh <prajesh.eleven118@gmail.com> (https://pr4j3sh.vercel.app/)",
+  "author": "Prajesh Pratap Singh <prajesh.eleven118@gmail.com> (https://pr4j3sh.github.io/pr4j3sh/)",
   "license": "MIT",
   "repository": {
     "type": "git",
