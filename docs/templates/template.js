@@ -1,5 +1,10 @@
 const items = [
   {
+    repo: "js-docs",
+    title: "Javascript Documentation",
+    tech: ["Docusaur", "JsDoc", "Documentation", "Javascript"],
+  },
+  {
     repo: "python",
     title: "Python Package/Library",
     tech: ["Python", "Library", "Package", "PIP"],
