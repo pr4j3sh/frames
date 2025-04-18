@@ -1,5 +1,11 @@
 const items = [
   {
+    repo: "next-tw",
+    title: "NextJs + Tailwind",
+    tech: ["NextJs", "Javascript", "Tailwind", "Frontend"],
+    url: "https://next-tw-frames.vercel.app/",
+  },
+  {
     repo: "js-docs",
     title: "Javascript Documentation",
     tech: ["Docusaur", "JsDoc", "Documentation", "Javascript"],
