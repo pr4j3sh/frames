@@ -1,5 +1,11 @@
 export default [
   {
+    repo: "temp-blog",
+    title: "Blog Template",
+    tech: ["NextJs", "@next/mdx", "Tailwind", "Frontend", "Markdown", "Blog"],
+    url: "https://temp-blog-frames.vercel.app/",
+  },
+  {
     repo: "react-auth",
     title: "React + Auth",
     tech: ["React", "@pr4j3sh/auth", "Zustand", "Tailwind", "Frontend"],
