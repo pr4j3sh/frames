@@ -10,6 +10,8 @@ With frames, you can skip setup and focus on building. Choose from ready-to-use 
 ## Usage
 
 ```bash
+npm create @pr4j3sh/frames@latest
+npm create @pr4j3sh/frames@latest -- -h
 npm create @pr4j3sh/frames@latest <template_name> myproject
 ```
 
