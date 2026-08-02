@@ -22,4 +22,20 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
+      - name: Diagnose OIDC
+        run: |
+          echo "GITHUB_ACTIONS=${GITHUB_ACTIONS:-unset}"
+          echo "has REQUEST_URL=${ACTIONS_ID_TOKEN_REQUEST_URL:+yes}"
+          echo "has REQUEST_TOKEN=${ACTIONS_ID_TOKEN_REQUEST_TOKEN:+yes}"
+          if [ -n "$ACTIONS_ID_TOKEN_REQUEST_URL" ]; then
+            URL="${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=npm:registry.npmjs.org"
+            IDTOKEN=$(curl -s -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$URL" | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{console.log(JSON.parse(s).value)}catch(e){console.error('PARSE_FAIL: '+s)}})")
+            echo "id token acquired: ${IDTOKEN:+yes}"
+            if [ -n "$IDTOKEN" ]; then
+              echo "--- exchange response ---"
+              curl -s -X POST "https://registry.npmjs.org/-/npm/v1/oidc/token/exchange/package/@pr4j3sh%2fcreate-frames" \
+                -H "Authorization: Bearer $IDTOKEN" -H "Content-Type: application/json" -d '{}'
+              echo
+            fi
+          fi
       - run: npm publish --access public --provenance
