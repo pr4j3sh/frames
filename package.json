@@ -1,6 +1,6 @@
 {
   "name": "@pr4j3sh/create-frames",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "frames CLI tool for cloning templates",
   "keywords": [
     "boilerplates",
