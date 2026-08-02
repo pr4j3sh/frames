@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "templates": [
+    {
+      "repo": "temp-blog",
+      "title": "Blog Template",
+      "description": "Next.js blog with MDX, Tailwind, and dark/light mode.",
+      "tech": ["NextJs", "@next/mdx", "Tailwind", "Frontend", "Markdown", "Blog"],
+      "demo": "https://temp-blog-frames.vercel.app/",
+      "source": "https://github.com/pr4j3sh/temp-blog/"
+    },
+    {
+      "repo": "react-auth",
+      "title": "React + Auth",
+      "description": "React app with @pr4j3sh/auth, Zustand state, and Tailwind.",
+      "tech": ["React", "@pr4j3sh/auth", "Zustand", "Tailwind", "Frontend"],
+      "demo": "https://react-auth-ruby.vercel.app/",
+      "source": "https://github.com/pr4j3sh/react-auth/"
+    },
+    {
+      "repo": "next-tw",
+      "title": "NextJs + Tailwind",
+      "description": "Next.js starter pre-wired with Tailwind CSS.",
+      "tech": ["NextJs", "Javascript", "Tailwind", "Frontend"],
+      "demo": "https://next-tw-frames.vercel.app/",
+      "source": "https://github.com/pr4j3sh/next-tw/"
+    },
+    {
+      "repo": "js-docs",
+      "title": "Javascript Documentation",
+      "description": "Docusaurus docs site with JsDoc-based documentation.",
+      "tech": ["Docusaur", "JsDoc", "Documentation", "Javascript"],
+      "source": "https://github.com/pr4j3sh/js-docs/"
+    },
+    {
+      "repo": "python",
+      "title": "Python Package/Library",
+      "description": "Python package scaffold with pyproject and module layout.",
+      "tech": ["Python", "Library", "Package", "PIP"],
+      "source": "https://github.com/pr4j3sh/python/"
+    },
+    {
+      "repo": "cpp",
+      "title": "CPP Package/Library",
+      "description": "C++ library scaffold with Makefile build.",
+      "tech": ["CPP", "Library", "Package", "Make"],
+      "source": "https://github.com/pr4j3sh/cpp/"
+    },
+    {
+      "repo": "c",
+      "title": "C Package/Library",
+      "description": "C library scaffold with Makefile build.",
+      "tech": ["C", "Library", "Package", "Make"],
+      "source": "https://github.com/pr4j3sh/c/"
+    },
+    {
+      "repo": "javascript",
+      "title": "Javascript NPM Package/Library",
+      "description": "JavaScript library scaffold for publishing to npm.",
+      "tech": ["Javascript", "Library", "Package", "NPM"],
+      "source": "https://github.com/pr4j3sh/javascript/"
+    },
+    {
+      "repo": "rust",
+      "title": "Rust Package/Library",
+      "description": "Rust crate scaffold with Cargo layout.",
+      "tech": ["Rust", "Library", "Package", "Crate"],
+      "source": "https://github.com/pr4j3sh/rust/"
+    },
+    {
+      "repo": "express-vercel",
+      "title": "Express + Vercel",
+      "description": "Express API ready to deploy to Vercel.",
+      "tech": ["Javascript", "API", "Express", "Vercel", "Backend", "Server"],
+      "demo": "https://express-vercel-frames.vercel.app/",
+      "source": "https://github.com/pr4j3sh/express-vercel/"
+    },
+    {
+      "repo": "express",
+      "title": "Express",
+      "description": "Minimal Express server scaffold.",
+      "tech": ["Javascript", "API", "Express", "Backend", "Server"],
+      "source": "https://github.com/pr4j3sh/express/"
+    },
+    {
+      "repo": "js-tw",
+      "title": "Javascript + Tailwind",
+      "description": "Vanilla JS + Tailwind with theme toggle and icons.",
+      "tech": ["Javascript", "Tailwind", "HTML", "CSS", "Frontend", "Vanilla"],
+      "demo": "https://pr4j3sh.github.io/js-tw/",
+      "source": "https://github.com/pr4j3sh/js-tw/"
+    },
+    {
+      "repo": "react-tw",
+      "title": "React + Tailwind",
+      "description": "React app with Tailwind and React Router.",
+      "tech": ["React", "Tailwind", "React Router", "Frontend"],
+      "demo": "https://react-tw-frames.vercel.app/",
+      "source": "https://github.com/pr4j3sh/react-tw/"
+    },
+    {
+      "repo": "react-firebase",
+      "title": "React + Firebase",
+      "description": "React app with Firebase, Redux Toolkit, and React Router.",
+      "tech": ["React", "Firebase", "Tailwind", "React Router", "Redux Toolkit", "Frontend"],
+      "demo": "https://react-firebase-frames.vercel.app/",
+      "source": "https://github.com/pr4j3sh/react-firebase/"
+    }
+  ]
+}

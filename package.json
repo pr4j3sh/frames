@@ -1,6 +1,6 @@
 {
   "name": "@pr4j3sh/create-frames",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "frames CLI tool for cloning templates",
   "main": "dist/bundle.js",
   "bin": {
@@ -31,7 +31,13 @@
     "url": "https://github.com/pr4j3sh/frames/issues"
   },
   "homepage": "https://pr4j3sh.github.io/frames/",
+  "engines": {
+    "node": ">=20.12.0"
+  },
   "devDependencies": {
-    "esbuild": "^0.24.0"
+    "@clack/prompts": "^1.7.0",
+    "commander": "^14.0.3",
+    "esbuild": "^0.24.0",
+    "picocolors": "^1.1.1"
   }
 }

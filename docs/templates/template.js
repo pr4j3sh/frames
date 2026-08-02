@@ -11,8 +11,8 @@ const html = items
         return `<code>${tag}</code>`;
       })
       .join("");
-    const url = item.url
-      ? `<a class="link" href="${item.url}" target="_blank">template</a><span>/</span>`
+    const demo = item.demo
+      ? `<a class="link" href="${item.demo}" target="_blank">demo</a><span>/</span>`
       : "";
     return `<article>
 <span class="tag">${item.repo}</span>
@@ -20,8 +20,8 @@ const html = items
 <article class="btns">${tags}</article>
 <pre><code>npm create @pr4j3sh/frames@latest ${item.repo} myapp</code></pre>
 <article class="btns">
-${url}
-<a class="link" href="https://github.com/pr4j3sh/${item.repo}/" target="_blank">github</a>
+${demo}
+<a class="link" href="${item.source}" target="_blank">github</a>
 </article>
 </article>`;
   })

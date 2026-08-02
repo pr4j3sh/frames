@@ -1,67 +1,73 @@
 #!/usr/bin/env node
 
-const { execSync } = require("node:child_process");
-const { exit, chdir } = require("node:process");
-const { renameSync, existsSync, rmSync } = require("node:fs");
+const { program } = require("./src/args");
+const registry = require("./src/registry");
+const ui = require("./src/ui");
+const { scaffold } = require("./src/run");
 
-const args = process.argv.slice(2);
+async function main() {
+  program.parse(process.argv);
+  const opts = program.opts();
+  const args = program.args;
 
-const repo = args[0];
-if (!repo) {
-  console.error("provide a template name");
-  exit(1);
-}
-const repoUrl = `https://github.com/pr4j3sh/${repo}.git`;
-const projectName = args[1] || repo;
-
-const rm = [
-  ".git",
-  ".github",
-  "LICENSE",
-  "CODE_OF_CONDUCT.md",
-  "CONTRIBUTING.md",
-  "Dockerfile",
-];
-
-try {
-  execSync(`git clone ${repoUrl} ${projectName}`, { stdio: "inherit" });
-  if (projectName !== ".") {
-    chdir(projectName);
-  }
-
-  rm.forEach((item) => {
-    if (existsSync(item)) {
-      rmSync(item, { recursive: true, force: true });
+  if (opts.list) {
+    const list = await registry.loadTemplates();
+    if (opts.json) {
+      process.stdout.write(JSON.stringify(list, null, 2) + "\n");
+      return;
     }
-  });
-
-  if (existsSync("package.json")) {
-    console.log("");
-    console.log("Installing dependencies...");
-    execSync(`npm i`, { stdio: "inherit" });
+    ui.printList(list);
+    return;
   }
 
-  if (existsSync(".env.example")) {
-    console.log("");
-    console.log("Creating .env file");
-    renameSync(".env.example", ".env");
+  if (opts.search) {
+    const list = await registry.loadTemplates();
+    const results = registry.search(list, opts.search);
+    if (opts.json) {
+      process.stdout.write(JSON.stringify(results, null, 2) + "\n");
+      return;
+    }
+    if (results.length === 0) {
+      ui.logError(`No templates match "${opts.search}".`);
+      return;
+    }
+    ui.printList(results);
+    return;
   }
 
-  console.log("");
-  console.log("Use command(s)");
-  if (projectName !== ".") {
-    console.log(`  cd ${projectName}`);
+  if (opts.info) {
+    const list = await registry.loadTemplates();
+    const template = registry.findTemplate(list, opts.info);
+    if (opts.json) {
+      if (!template) {
+        process.stdout.write(
+          JSON.stringify({ error: `Unknown template "${opts.info}"` }, null, 2) +
+            "\n"
+        );
+        process.exitCode = 1;
+      } else {
+        process.stdout.write(JSON.stringify(template, null, 2) + "\n");
+      }
+      return;
+    }
+    if (!template) {
+      const suggestion = registry.suggest(list, opts.info);
+      ui.logError(
+        suggestion
+          ? `Unknown template "${opts.info}". Did you mean "${suggestion.repo}"?`
+          : `Unknown template "${opts.info}". Run \`create-frames --list\` to see available templates.`
+      );
+      process.exitCode = 1;
+      return;
+    }
+    ui.printInfo(template);
+    return;
   }
-  if (existsSync("package.json")) {
-    console.log("  npm run dev");
-  } else if (existsSync("Cargo.toml")) {
-    console.log("  cargo run");
-  } else if (existsSync("Makefile")) {
-    console.log("  make run");
-  } else if (existsSync("pyproject.toml")) {
-    console.log("  python -m package.main");
-  }
-} catch (error) {
-  console.error(error);
-  exit(1);
+
+  await scaffold(args, opts);
 }
+
+main().catch((error) => {
+  ui.logError(error && error.message ? error.message : String(error));
+  process.exitCode = 1;
+});

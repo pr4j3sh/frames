@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   base: "/frames/",
+  server: { fs: { allow: [".."] } },
   build: {
     rollupOptions: {
       input: {

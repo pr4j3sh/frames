@@ -6,7 +6,6 @@ try {
     bundle: true,
     minify: true,
     platform: "node",
-    packages: "external",
     outfile: "dist/bundle.js",
   });
   console.log("Build successful!");
