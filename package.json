@@ -1,43 +1,43 @@
 {
   "name": "@pr4j3sh/create-frames",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "frames CLI tool for cloning templates",
-  "main": "dist/bundle.js",
-  "bin": {
-    "create-frames": "dist/bundle.js"
-  },
-  "scripts": {
-    "test": "echo \"Running tests...\" && exit 0",
-    "build": "node esbuild.config.js",
-    "dev": "node ."
-  },
-  "files": [
-    "dist"
-  ],
   "keywords": [
-    "templates",
     "boilerplates",
+    "frames",
     "frameworks",
     "libraries",
-    "frames"
+    "templates"
   ],
-  "author": "Prajesh Pratap Singh <prajesh.eleven118@gmail.com> (https://pr4j3sh.github.io/pr4j3sh/)",
+  "homepage": "https://pr4j3sh.github.io/frames/",
+  "bugs": {
+    "url": "https://github.com/pr4j3sh/frames/issues"
+  },
   "license": "MIT",
+  "author": "Prajesh Pratap Singh <prajesh.eleven118@gmail.com> (https://pr4j3sh.github.io/pr4j3sh/)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pr4j3sh/frames.git"
   },
-  "bugs": {
-    "url": "https://github.com/pr4j3sh/frames/issues"
+  "bin": {
+    "create-frames": "dist/bundle.js"
   },
-  "homepage": "https://pr4j3sh.github.io/frames/",
-  "engines": {
-    "node": ">=20.12.0"
+  "files": [
+    "dist"
+  ],
+  "main": "dist/bundle.js",
+  "scripts": {
+    "test": "echo \"Running tests...\" && exit 0",
+    "build": "node esbuild.config.js",
+    "dev": "node ."
   },
   "devDependencies": {
     "@clack/prompts": "^1.7.0",
     "commander": "^14.0.3",
     "esbuild": "^0.24.0",
     "picocolors": "^1.1.1"
+  },
+  "engines": {
+    "node": ">=20.12.0"
   }
 }
