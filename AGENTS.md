@@ -37,5 +37,5 @@ npm run build   # vite build -> docs/dist
 
 ## Release
 
-- npm publish is triggered by creating a GitHub release (`.github/workflows/npm-publish.yml`): it runs `npm ci`, `npm test`, `npm run build`, then publishes. Version bump + tag `vX.Y.Z` are manual; CI builds `dist`, never commit it. Requires Node >= 20.12 (engines).
+- npm publish is triggered by publishing a GitHub release (`.github/workflows/publish.yml`). It uses **OIDC trusted publishing** (no token secret): `npm ci`, `npm test`, `npm run build`, then `npm publish --access public --provenance`. The published version comes from `package.json` on `master`, so bump it before tagging. Requires npm >= 11.5 (installed via `npm install -g npm@11`) for OIDC; node 20, engines `>=20.12.0`. The trusted publisher on npmjs.com is bound to workflow filename `publish.yml`.
 - Docs deploy is automatic on `master` push.
