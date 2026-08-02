@@ -5,27 +5,22 @@ on:
     types: [published]
 
 permissions:
-  contents: write # To push updated files back to master
-  packages: write # For GitHub packages (optional)
-  id-token: write # Required for OIDC trusted publishing
+  contents: read
+  id-token: write # Required for npm OIDC trusted publishing
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
+      - uses: actions/checkout@v4
         with:
           ref: master
-          token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
-
-      - name: Publish NPM Package
-        uses: phucbm/publish-npm-action@v1 # Docs https://github.com/phucbm/publish-npm-action
+      - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          install-command: 'npm ci'
-          test-command: 'npm test'
-          build-command: 'npm run build'
-          target-branch: 'master'
-          skip-tests: 'false'
+          node-version: 20
+      - run: npm install -g npm@latest
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - run: npm publish --access public --provenance
