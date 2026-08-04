@@ -113,6 +113,13 @@
       "tech": ["Angular", "Tailwind", "Typescript", "Frontend"],
       "demo": "https://angular-tw-frames.vercel.app/",
       "source": "https://github.com/pr4j3sh/angular-tw/"
+    },
+    {
+      "repo": "fastapi",
+      "title": "FastAPI",
+      "description": "Minimal FastAPI server scaffold.",
+      "tech": ["Python", "API", "FastAPI", "Backend", "Server"],
+      "source": "https://github.com/pr4j3sh/fastapi/"
     }
   ]
 }
