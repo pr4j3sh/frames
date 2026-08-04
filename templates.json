@@ -105,6 +105,14 @@
       "tech": ["React", "Firebase", "Tailwind", "React Router", "Redux Toolkit", "Frontend"],
       "demo": "https://react-firebase-frames.vercel.app/",
       "source": "https://github.com/pr4j3sh/react-firebase/"
+    },
+    {
+      "repo": "angular-tw",
+      "title": "Angular + Tailwind",
+      "description": "Angular app with Tailwind and React Router.",
+      "tech": ["Angular", "Tailwind", "Typescript", "Frontend"],
+      "demo": "https://angular-tw-frames.vercel.app/",
+      "source": "https://github.com/pr4j3sh/angular-tw/"
     }
   ]
 }
